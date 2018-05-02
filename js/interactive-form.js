@@ -345,12 +345,12 @@ form.addEventListener('submit', (e) => {
         if (validFirstName && validLastName && validEmail && validActivities && validPayment) {
             const successModal = document.createElement('div');
             successModal.id = "successModal";
-            successModal.innerHTML = "Thank you for registering <br/>" + firstName.value + " " + lastName.value;
-            successModal.innerHTML += "<br/><br/>A confirmation has been sent to: <br/>" + emailField.value;
+            successModal.innerHTML = "<span class='modal-text'>Thank you for registering </span><br/><span class='modal-input'>" + firstName.value + " " + lastName.value + "</span>";
+            successModal.innerHTML += "<br/><br/><span class='modal-text'>A confirmation email has been sent to: </span><br/><span class='modal-input'>" + emailField.value + "</span>";
 
             const closeBtn = document.createElement('span');
             closeBtn.className = "close-btn";
-            closeBtn.innerHTML = "x";
+            closeBtn.innerHTML = "Close";
             closeBtn.onclick = closeSuccessModal;
 
             successModal.appendChild(closeBtn);
