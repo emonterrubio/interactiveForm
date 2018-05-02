@@ -1,0 +1,222 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+  }
+
+  body,
+  input,
+  button {
+   font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+		font: 1em/1.5;
+		color: #2E3E58;
+	  background: #3ab4d4 url('../imgs/form-bkgd.png') repeat;
+  }
+
+  header {
+		position:relative;
+  }
+	.logo {
+		width:80px; height:80px; text-indent:-9999px; position:absolute; left:0px; top:24px; background:url('../imgs/ge-logo.svg') no-repeat; background-size:contain;
+		box-shadow: 0 1px 1px rgba(3, 44, 54, 1);
+		border-radius: 50%;
+	}
+
+  h1 {
+	  font-size: 2.5em;
+		font-weight: 300;
+	  /* text-shadow: 0 1px 1px rgba(3, 44, 54, 1); */
+	  margin: 0 0 0 60px;
+		color: #FFF;
+  }
+
+  a {
+	text-decoration: none;
+  }
+
+  /* =================================
+	Form Element Styles
+  ==================================== */
+
+  form {
+	  padding: .875em 1.875em 1.875em;
+	  background: #FFF;
+	  position:relative;
+  }
+
+  fieldset,
+  legend,
+  button {
+	  padding: 0;
+	  border: none;
+  }
+
+  fieldset {
+	  margin-top: 1.5em;
+  }
+
+  legend,
+  button {
+	  font-size: 1.25em;
+  }
+
+  legend {
+	  font-weight: 500;
+	  padding-top: .5em;
+	  border-top: 1px solid #2E3E58;
+	  margin-bottom: 1.125em;
+  }
+	fieldset:first-of-type legend {
+		border-top:none;
+	}
+
+  input[type="text"],
+  input[type="email"],
+  legend {
+	  width: 100%;
+  }
+
+  label {
+	  color: #000;
+	  display: block;
+	  margin-bottom: .5em;
+	  display:inline-block;
+  }
+
+  input,
+  select {
+	  margin-bottom: 1.125em;
+  }
+
+	select { width:120px; padding:5px 10px; border:1px solid #ccc; margin-left:10px; font-size:14px;}
+
+	input {
+	  font-size: 1em;
+	  font-weight: 500;
+	  padding: .8em;
+	  background: #FFF;
+	  border: 1px solid #2E3E58;
+	  outline: none;
+  }
+
+  input:focus {
+	  background: #F6F8F9;
+	  border-color: #5e97b0;
+	  transition: border-color .4s, background-color .4s;
+  }
+  input.error:focus {
+	  border-color:red;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+	  display: inline-block;
+  }
+
+  button {
+	  color: #fff;
+	  padding: .55em 1.25em;
+	  background: #007AFF;
+	  margin: 1.25em 0 .5em;
+	  cursor: pointer;
+  }
+
+	.btn-wrap {
+		float: right;
+	}
+
+  button:hover {
+	  background: #298FFF;
+  }
+
+	button.disabled {
+		background: #9B9B9B;
+	}
+
+  ::-webkit-input-placeholder {opacity:0.5;}
+  input:focus::-webkit-input-placeholder { color: transparent;}
+
+  ::-moz-placeholder {opacity:0.5;}
+  input:focus::-moz-placeholder { color: transparent;}
+
+  /* =================================
+	Page Styles
+  ==================================== */
+
+  .container {
+	  margin: auto;
+	  max-width: 680px;
+  }
+
+  .interests input {
+	  margin-bottom: 0;
+  }
+
+  .credit-card {
+	  margin-top: 1.25em;
+  }
+  .error {border-color:red;}
+  .errorMsg {color:red; float:right;}
+  .workshops {position:relative;}
+	.workshops legend {float:left;}
+	.workshops input {margin-bottom:0;}
+  .workshops .errorMsg {position:absolute; right:0; top:1em;}
+  .workshops .error {border-color:#5e97b0;}
+	.workshops label {margin-bottom:30px; width:100%;}
+	.workshops label .price, .workshops label .dateTime {display:block; margin-left:24px;}
+	.totalPrice {font-size:24px;}
+
+	#exp-month {margin-right:20px;}
+  #successModal {font-size:28px; text-align:center; position:fixed; top:50%; left:50%; width:500px; padding:80px 0; margin:-250px 0 0 -250px; background-color:#fff; border:15px solid steelblue;}
+  #successModal .close-btn { width:30px; height:30px; background-color:#fff; border:2px solid #000; border-radius:50%; position:absolute; right:-20px; top:-20px; text-align:center; color:#000; line-height:25px; font-size:22px;}
+  #successModal .close-btn:hover { cursor:pointer; background-color:#ccc;}
+
+  /* =================================
+	Helper Classes
+  ==================================== */
+
+  .is-hidden {
+	  display: none;
+  }
+
+  .clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+  }
+
+  /* =================================
+	Media Queries
+  ==================================== */
+
+  @media (min-width: 0) and (max-width: 679px) {
+	  header {
+		  padding: 2em 0;
+	  }
+	  button {
+		  width: 100%;
+	  }
+  }
+
+  @media (min-width: 680px) {
+	  header {
+		  padding: 2.5em 2.5em;
+	  }
+	  .col {
+		  float: left;
+	  }
+	  .col + .col {
+		  margin-left: 2.5%;
+	  }
+	  .col-3 {
+		  width: 23%;
+	  }
+	  .col-6 {
+		  width: 49%;
+	  }
+  }
