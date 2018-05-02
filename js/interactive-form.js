@@ -335,7 +335,6 @@ const validatePayment = () => {
 
 // validate form on submit
 form.addEventListener('submit', (e) => {
-    console.log(“submit clicked”)
     e.preventDefault();
     const validFirstName = validateFirstName();
     const validLastName = validateLastName();
@@ -343,7 +342,7 @@ form.addEventListener('submit', (e) => {
     const validActivities = validateActivities();
     const validPayment = validatePayment();
     setTimeout(() => {
-        if (validName && validEmail && validActivities && validPayment) {
+        if (validFirstName && validLastName && validEmail && validActivities && validPayment) {
             const successModal = document.createElement('div');
             successModal.id = "successModal";
             successModal.innerHTML = "Thank you for registering <br/>" + firstName.value + " " + lastName.value;
