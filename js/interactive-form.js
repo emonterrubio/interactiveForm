@@ -55,7 +55,7 @@ activities.addEventListener('change', (e) => {
     // gets the time the workshop takes place from the label text
     const textArray = labelText.split("\n");
     let time = "";
-    if (textArray.length === 3 ) {
+    if (textArray.length > 0 ) {
         time = textArray[1];
     } else {
         time = null;
