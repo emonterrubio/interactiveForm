@@ -5,7 +5,7 @@ document.getElementsByTagName('input')[0].focus();
 
 
 /* *********************************************
-------------- Job Role Section -------------
+------------- Type of attendee section -------------
 ********************************************** */
 const regType = document.getElementById('regType');
 const regInput = document.getElementById('other-title');
@@ -24,7 +24,7 @@ regType.addEventListener("change", () => {
 
 
 /* *********************************************
-------------- Register for Activities Section -------------
+------------- Register for workshops section -------------
 /********************************************* */
 const activities = document.querySelector('.workshops');
 const workshops = document.querySelectorAll('.workshops label');
@@ -333,8 +333,9 @@ const validatePayment = () => {
     }
 }
 
-// validate form on sumbit
+// validate form on submit
 form.addEventListener('submit', (e) => {
+    console.log(“submit clicked”)
     e.preventDefault();
     const validFirstName = validateFirstName();
     const validLastName = validateLastName();
