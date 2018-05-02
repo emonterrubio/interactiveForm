@@ -232,7 +232,7 @@ const validateActivities = () => {
         return true;
     } else {
         if (!activitiesLegend.classList.contains("error")) {
-            createErrorMsg(activitiesLegend, "Please select at least one activity.");
+            createErrorMsg(activitiesLegend, "Please select at least one workshop.");
         }
         return false;
     }

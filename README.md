@@ -13,7 +13,7 @@ Registration form for GE Minds + Machines 2017.
 • Registrant should be able to choose from a range of workshop options which include workshop title, date, times and price.</br>
 • Workshop selections should not conflict with one another based on schedule and must total in USD.</br>
 • Allow for payment information.
-• Name, email address and payment info fields must be validated.
+• Name, last name, email address, at least one workshop selection and payment info fields must be validated.
 
 ## Tools Used
 HTML, CSS, Javascript
