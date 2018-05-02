@@ -162,7 +162,7 @@ const removeError = (elem) => {
 const validateFirstName = () => {
     if (firstName.value === "" || firstName.value === " ") {
         if (!firstName.classList.contains("error")) {
-            createErrorMsg(firstName, "this field is required");
+            createErrorMsg(firstName, "please enter a name");
         }
         return false;
     } else {
@@ -177,7 +177,7 @@ const validateFirstName = () => {
 const validateLastName = () => {
     if (lastName.value === "" || lastName.value === " ") {
         if (!lastName.classList.contains("error")) {
-            createErrorMsg(lastName, "this field is required");
+            createErrorMsg(lastName, "please enter a last name");
         }
         return false;
     } else {
